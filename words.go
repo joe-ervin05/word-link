@@ -26,7 +26,7 @@ func isEmpty(q queue) bool {
 	return len(q) == 0
 }
 
-// preforms a bredth-first search starting at the first word index
+// preforms a breadth-first search starting at the first word index
 // returns arrays for each words parent and their distance to the starting node
 func (wg wordGraph) bfs(from int) (par, dist []int) {
 	q := queue{from}
