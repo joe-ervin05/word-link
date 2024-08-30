@@ -2,7 +2,7 @@
 
 Given any two five letter words, this program will find the shortest path between them using intermediate words that are only one letter different.
 
-For example, starting at "start" and ending at "close" would yield the path start -> stare -> share -> shore -> chore -> chose -> close.
+For example, starting at "heads" and ending at "tails" would yield the path: heads -> heals -> hells -> halls -> hails -> tails.
 
 Certain words cannot be linked in this way. For example, starting at "zebra" and ending at "horse" yields no path because no path exists between the words.
 
