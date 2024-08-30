@@ -12,9 +12,9 @@ The program uses a word bank of 5757 five letter English words. It uses this wor
 
 When a start and end word are given, the program performs a breadth-first search from the start word to all other connected words. It then uses the result of this search to find the shortest path between the start word and the end word.
 
-Breadth-first search is used for this problem because it has the property that the first time it reaches a vertex is the shortest path to that vertex. This means that the path that results from a breadth-first search will always be the shortest path when dealing with an unweighted graph.
+Breadth-first search is used for this problem because it has the property that the first time it reaches a vertex is the shortest path to that vertex in an unweighted graph.
 
-An important thing to consider when using breadth-first search is path looping. Many paths between words are cyclical which causes some implementations of breadth-first search to get stuck in an infinite loop. The solution to this is to keep track of which words have already been visited and only visit a new word if it has not been visited yet.
+Many paths between words are cyclical which causes some implementations of breadth-first search to get stuck in an infinite loop. The solution to this is to keep track of which words have already been visited and only visit a new word if it has not been visited yet.
 
 ## Running the program
 
