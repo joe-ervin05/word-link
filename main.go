@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"strings"
 )
 
 func main() {
@@ -56,10 +57,10 @@ func getInp(wrdList []string) (idx1 int, idx2 int) {
 
 	var wrd1 string
 
-	fmt.Print("from word: ")
+	fmt.Print("start word: ")
 	fmt.Scan(&wrd1)
 
-	idx1 = indexOf(wrdList, wrd1)
+	idx1 = indexOf(wrdList, strings.ToLower(wrd1))
 
 	for idx1 < 0 {
 		if len(wrd1) != 5 {
@@ -68,18 +69,18 @@ func getInp(wrdList []string) (idx1 int, idx2 int) {
 			fmt.Print("word not found")
 		}
 
-		fmt.Print("\nfrom word: ")
+		fmt.Print("\nstart word: ")
 
 		fmt.Scan(&wrd1)
-		idx1 = indexOf(wrdList, wrd1)
+		idx1 = indexOf(wrdList, strings.ToLower(wrd1))
 	}
 
 	var wrd2 string
 
-	fmt.Print("to word: ")
+	fmt.Print("end word: ")
 	fmt.Scan(&wrd2)
 
-	idx2 = indexOf(wrdList, wrd2)
+	idx2 = indexOf(wrdList, strings.ToLower(wrd2))
 
 	for idx2 < 0 {
 		if len(wrd2) != 5 {
@@ -88,10 +89,10 @@ func getInp(wrdList []string) (idx1 int, idx2 int) {
 			fmt.Print("word not found")
 		}
 
-		fmt.Print("\nto word: ")
+		fmt.Print("\nend word: ")
 
 		fmt.Scan(&wrd2)
-		idx2 = indexOf(wrdList, wrd2)
+		idx2 = indexOf(wrdList, strings.ToLower(wrd2))
 	}
 
 	return idx1, idx2
